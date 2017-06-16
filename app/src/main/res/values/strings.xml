@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Inside IN</string>
+    <string name="option">Button</string>
+    <string name="questions">questions</string>
+    <string name="button">Button</string>
+    <string name="button1">Button</string>
+    <string name="button2">Button</string>
+    <string name="button3">Button</string>
+    <string name="start">START</string>
+</resources>
