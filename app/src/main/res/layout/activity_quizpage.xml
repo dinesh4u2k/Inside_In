@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button3"
+        android:gravity="center"
         android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -23,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button2"
+        android:gravity="center"
         android:layout_above="@+id/option4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -32,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button1"
+        android:gravity="center"
         android:layout_above="@+id/option3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -41,15 +44,74 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button"
+        android:gravity="center"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/option2" />
 
     <TextView
         android:id="@+id/question"
+        android:gravity="center"
+        android:textSize="24sp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:text="@string/questions"
+        android:layout_above="@+id/option1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/technology1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="69dp"
-        android:text="@string/questions" />
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="tech" />
+
+    <TextView
+        android:id="@+id/medicine1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/technology1"
+        android:layout_centerHorizontal="true"
+        android:text="med" />
+
+    <TextView
+        android:id="@+id/business1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/medicine1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:gravity="center"
+        android:text="bus" />
+
+    <TextView
+        android:id="@+id/civil_services1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/question"
+        android:layout_marginBottom="26dp"
+        android:layout_toLeftOf="@+id/medicine1"
+        android:layout_toStartOf="@+id/medicine1"
+        android:gravity="center"
+        android:text="civ" />
+
+    <TextView
+        android:id="@+id/creative1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/civil_services1"
+        android:layout_toEndOf="@+id/medicine1"
+        android:layout_toRightOf="@+id/medicine1"
+        android:gravity="center"
+        android:text="cre" />
+
 </RelativeLayout>
