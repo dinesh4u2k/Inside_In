@@ -12,16 +12,19 @@ import android.widget.Toast;
 
 public class quizpage extends AppCompatActivity {
 
-    Button option1,option2,option3,option4;
-    TextView question,technology1,medicine1,business1,civil_services1, creative1;
     private Questions mQuestions = new Questions();
+    private Button option1,option2,option3,option4;
+    private TextView question , score;
+
+    private String mAnswer;
+    private int mScore = 0;
 
     private int mQuestionNumber= 0;
+    private int mQuestionsLength = mQuestions.mQuestions.length;
 
     boolean doubleTap = false;
 
-    int dep[];
-    int i=0;
+
   /*  int tech =0;
     int med = 0;
     int bus = 0;
@@ -41,52 +44,65 @@ public class quizpage extends AppCompatActivity {
         option3 = (Button) findViewById(R.id.option3);
         option4 = (Button) findViewById(R.id.option4);
         question = (TextView) findViewById(R.id.question);
-        technology1 = (TextView) findViewById(R.id.technology1);
-        medicine1 = (TextView) findViewById(R.id.medicine1);
-        business1 = (TextView) findViewById(R.id.business1);
-        civil_services1 = (TextView) findViewById(R.id.civil_services1);
-        creative1 = (TextView) findViewById(R.id.creative1);
+        score = (TextView) findViewById(R.id.score);
+
+
 
         updateQuestion();
 
-
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                dep[i]=4;
-                i++;
-                updateQuestion();
-
+            public void onClick(View view) {
+                if(option1.getText()==mAnswer){
+                    mScore = mScore+1;
+                    updateScore(mScore);
+                    updateQuestion();
+                }else{
+                    updateQuestion();
+                }
             }
         });
+
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                dep[i]=3;
-                i++;
-                updateQuestion();
-
+            public void onClick(View view) {
+                if(option2.getText()==mAnswer){
+                    mScore = mScore+1;
+                    updateScore(mScore);
+                    updateQuestion();
+                }else{
+                    updateQuestion();
+                }
             }
         });
+
         option3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                dep[i]=2;
-                i++;
-                updateQuestion();
-
+            public void onClick(View view) {
+                if(option3.getText()==mAnswer){
+                    mScore = mScore+1;
+                    updateScore(mScore);
+                    updateQuestion();
+                }else{
+                    updateQuestion();
+                }
             }
         });
+
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                dep[i]=1;
-                i++;
-                updateQuestion();
-
+            public void onClick(View view) {
+                if(option4.getText()==mAnswer){
+                    mScore = mScore+1;
+                    updateScore(mScore);
+                    updateQuestion();
+                }else{
+                    updateQuestion();
+                }
             }
-
         });
+
+
        /*technology();
         medecine();
         business();
@@ -94,13 +110,21 @@ public class quizpage extends AppCompatActivity {
         creative();*/
     }
 
+        private void updateScore(int point){
+            score.setText(""+mScore);
+        }
+
         public void updateQuestion() {
+
             question.setText(mQuestions.getQuestion(mQuestionNumber));
-            option1.setText(mQuestions.getoption1(mQuestionNumber));
-            option2.setText(mQuestions.getoption2(mQuestionNumber));
-            option3.setText(mQuestions.getoption3(mQuestionNumber));
-            option4.setText(mQuestions.getoption4(mQuestionNumber));
-            mQuestionNumber++;
+            option1.setText(mQuestions.getChoice1(mQuestionNumber));
+            option2.setText(mQuestions.getChoice2(mQuestionNumber));
+            option3.setText(mQuestions.getChoice3(mQuestionNumber));
+            option4.setText(mQuestions.getChoice4(mQuestionNumber));
+            mAnswer = mQuestions.getCorrectAnswer(mQuestionNumber);
+            if(mQuestionsLength > mQuestionNumber) {
+                mQuestionNumber++;
+            }
         }
 
 
