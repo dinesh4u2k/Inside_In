@@ -1,14 +1,19 @@
 package com.dinesh.project_x;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class Result extends quizpage {
+public class Result extends AppCompatActivity   {
 
     public TextView Technology,Medicine,Business,Civil_Services,Creativity;
 
-    public int tech,med,bus,civ,cre;
+    boolean doubleTap = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +26,34 @@ public class Result extends quizpage {
         Civil_Services = (TextView)findViewById(R.id.Civil_Services);
         Creativity = (TextView)findViewById(R.id.Creativity);
 
-        tech = department[1] + department[6] + department[11] + department[16];
-        Technology.setText(tech);
+        Intent intent = getIntent();
+        int myvalue = intent.getIntExtra("technology",0);
+        int myvalue1 = intent.getIntExtra("medicine",0);
+        int myvalue2 = intent.getIntExtra("business",0);
+        int myvalue3 = intent.getIntExtra("civil_services",0);
+        int myvalue4 = intent.getIntExtra("creativity",0);
+        Technology.setText(""+myvalue);
+        Medicine.setText(""+myvalue1);
+        Business.setText(""+myvalue2);
+        Civil_Services.setText(""+myvalue3);
+        Creativity.setText(""+myvalue4);
 
-        med = department[1] + department[6] + department[11] + department[16];
-        Medicine.setText(med);
-
-        bus = department[1] + department[6] + department[11] + department[16];
-        Business.setText(bus);
-
-        civ = department[1] + department[6] + department[11] + department[16];
-        Civil_Services.setText(civ);
-
-        cre = department[1] + department[6] + department[11] + department[16];
-        Creativity.setText(cre);
+        }
+    public void onBackPressed(){
+        if(doubleTap){
+            super.onBackPressed();
+        }
+        else {
+            Toast.makeText(this,"Press Back Button To Exit" , Toast.LENGTH_SHORT).show();
+            doubleTap = true;
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    doubleTap = false;
+                }
+            }, 500);
+        }
     }
-}
+    }
+

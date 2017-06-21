@@ -9,86 +9,98 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
-
-
 public class quizpage extends AppCompatActivity {
 
     private Questions mQuestions = new Questions();
     private Button option1,option2,option3,option4;
     private TextView question , score;
-
-
     private int mScore = 0;
 
     private int mQuestionNumber= 0;
-    private int mQuestionsLength = mQuestions.mQuestions.length;
 
 
     boolean doubleTap = false;
     public int[] department = new int[30];
-    private int i=0;
+    private int j=0;
     private int m=0;
-
-
-
-
+    public int tech,med,bus,civ,cre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizpage);
-
-
-
         option1 = (Button) findViewById(R.id.option1);
         option2 = (Button) findViewById(R.id.option2);
         option3 = (Button) findViewById(R.id.option3);
         option4 = (Button) findViewById(R.id.option4);
         question = (TextView) findViewById(R.id.question);
         score = (TextView) findViewById(R.id.score);
-
-
-            updateQuestion();
-
-
+        updateQuestion();
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(option1.getText()=="Very Intrested"){
-//                    mScore = mScore+1;
-//                    updateScore(mScore);
+                if (option1.getText() == "Very Intrested") {
                     updatePoints();
-                    mScore = mScore + department[m];
-                    m++;
+                    mScore++;
                     updateScore(mScore);
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                         med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
+                        Intent i = new Intent(quizpage.this, Result.class);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
+                        quizpage.this.finish();
+                        startActivity(i);
+                    } else {
+                        updateQuestion();
+                    }
+                } else {
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                        med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
+                        Intent i = new Intent(quizpage.this, Result.class);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
+                        quizpage.this.finish();
+                        startActivity(i);
+                    } else {
+                        updateQuestion();
+                    }
 
-                                if (mQuestionNumber == 19) {
-                                    Intent i = new Intent(quizpage.this, Result.class);
-                                    Bundle bundle = new Bundle();
-                                    bundle.putInt("FINAL", mScore);
-                                    i.putExtras(bundle);
-                                    quizpage.this.finish();
-                                    startActivity(i);
+                }
 
-                                } else {
-                                    updateQuestion();
-                                }
-                            } else {
-                                if (mQuestionNumber == 19) {
-                                    Intent i = new Intent(quizpage.this, Result.class);
-                                    Bundle bundle = new Bundle();
-                                    bundle.putInt("FINAL", mScore);
-                                    i.putExtras(bundle);
-                                    quizpage.this.finish();
-                                    startActivity(i);
-
-                                } else {
-                                    updateQuestion();
-                                }
-
-                            }
                         }
                     });
 
@@ -96,29 +108,59 @@ public class quizpage extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             if (option2.getText() == "Intrested") {
-//                    mScore = mScore+1;
-//                    updateScore(mScore);
-                                updatePoints1();
-                                mScore = mScore + department[m];
-                                m++;
+                          updatePoints1();
+                                mScore++;
                                 updateScore(mScore);
-                                if (mQuestionNumber == 19) {
+                                if (mQuestionNumber == 20) {
+                                    tech = (department[0] + department[5] + department[10] + department[15]);
+                                    med = (department[1] + department[6] + department[11] + department[16]);
+                                    bus = (department[2] + department[7] + department[12] + department[17]);
+                                    civ = (department[3] + department[8] + department[13] + department[18]);
+                                    cre = (department[4] + department[9] + department[14] + department[19]);
+                                    String neww = Integer.toString(tech);
+                                    int newww = Integer.parseInt(neww);
+                                    String neww1 = Integer.toString(med);
+                                    int newww1 = Integer.parseInt(neww1);
+                                    String neww2 = Integer.toString(bus);
+                                    int newww2 = Integer.parseInt(neww2);
+                                    String neww3= Integer.toString(civ);
+                                    int newww3 = Integer.parseInt(neww3);
+                                    String neww4 = Integer.toString(cre);
+                                    int newww4 = Integer.parseInt(neww4);
                                     Intent i = new Intent(quizpage.this, Result.class);
-                                    Bundle bundle = new Bundle();
-                                    bundle.putInt("FINAL", mScore);
-                                    i.putExtras(bundle);
+                                    i.putExtra("technology",newww);
+                                    i.putExtra("medicine",newww1);
+                                    i.putExtra("business",newww2);
+                                    i.putExtra("civil_services",newww3);
+                                    i.putExtra("creativity",newww4);
                                     quizpage.this.finish();
                                     startActivity(i);
-
                                 } else {
                                     updateQuestion();
                                 }
                             } else {
-                                if (mQuestionNumber == 19) {
+                                if (mQuestionNumber == 20) {
+                                    tech = (department[0] + department[5] + department[10] + department[15]);
+                                    med = (department[1] + department[6] + department[11] + department[16]);
+                                    bus = (department[2] + department[7] + department[12] + department[17]);
+                                    civ = (department[3] + department[8] + department[13] + department[18]);
+                                    cre = (department[4] + department[9] + department[14] + department[19]);
+                                    String neww = Integer.toString(tech);
+                                    int newww = Integer.parseInt(neww);
+                                    String neww1 = Integer.toString(med);
+                                    int newww1 = Integer.parseInt(neww1);
+                                    String neww2 = Integer.toString(bus);
+                                    int newww2 = Integer.parseInt(neww2);
+                                    String neww3= Integer.toString(civ);
+                                    int newww3 = Integer.parseInt(neww3);
+                                    String neww4 = Integer.toString(cre);
+                                    int newww4 = Integer.parseInt(neww4);
                                     Intent i = new Intent(quizpage.this, Result.class);
-                                    Bundle bundle = new Bundle();
-                                    bundle.putInt("FINAL", mScore);
-                                    i.putExtras(bundle);
+                                    i.putExtra("technology",newww);
+                                    i.putExtra("medicine",newww1);
+                                    i.putExtra("business",newww2);
+                                    i.putExtra("civil_services",newww3);
+                                    i.putExtra("creativity",newww4);
                                     quizpage.this.finish();
                                     startActivity(i);
 
@@ -134,18 +176,33 @@ public class quizpage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(option3.getText()=="Slightly Intrested"){
-//                    mScore = mScore+1;
-//                    updateScore(mScore);
+
                     updatePoints2();
-                    mScore = mScore + department[m];
-                    m++;
+                    mScore++;
                     updateScore(mScore);
 
-                    if (mQuestionNumber == 19) {
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                        med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("FINAL", mScore);
-                        i.putExtras(bundle);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
                         quizpage.this.finish();
                         startActivity(i);
 
@@ -153,11 +210,28 @@ public class quizpage extends AppCompatActivity {
                         updateQuestion();
                     }
                 } else {
-                    if (mQuestionNumber == 19) {
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                        med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("FINAL", mScore);
-                        i.putExtras(bundle);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
                         quizpage.this.finish();
                         startActivity(i);
 
@@ -173,17 +247,31 @@ public class quizpage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(option4.getText()=="Not Intrested"){
-//                    mScore = mScore+1;
-//                    updateScore(mScore);
                     updatePoints3();
-                    mScore = mScore + department[m];
-                    m++;
+                    mScore++;
                     updateScore(mScore);
-                    if (mQuestionNumber == 19) {
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                        med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("FINAL", mScore);
-                        i.putExtras(bundle);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
                         quizpage.this.finish();
                         startActivity(i);
 
@@ -191,11 +279,28 @@ public class quizpage extends AppCompatActivity {
                         updateQuestion();
                     }
                 } else {
-                    if (mQuestionNumber == 19) {
+                    if (mQuestionNumber == 20) {
+                        tech = (department[0] + department[5] + department[10] + department[15]);
+                        med = (department[1] + department[6] + department[11] + department[16]);
+                        bus = (department[2] + department[7] + department[12] + department[17]);
+                        civ = (department[3] + department[8] + department[13] + department[18]);
+                        cre = (department[4] + department[9] + department[14] + department[19]);
+                        String neww = Integer.toString(tech);
+                        int newww = Integer.parseInt(neww);
+                        String neww1 = Integer.toString(med);
+                        int newww1 = Integer.parseInt(neww1);
+                        String neww2 = Integer.toString(bus);
+                        int newww2 = Integer.parseInt(neww2);
+                        String neww3= Integer.toString(civ);
+                        int newww3 = Integer.parseInt(neww3);
+                        String neww4 = Integer.toString(cre);
+                        int newww4 = Integer.parseInt(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("FINAL", mScore);
-                        i.putExtras(bundle);
+                        i.putExtra("technology",newww);
+                        i.putExtra("medicine",newww1);
+                        i.putExtra("business",newww2);
+                        i.putExtra("civil_services",newww3);
+                        i.putExtra("creativity",newww4);
                         quizpage.this.finish();
                         startActivity(i);
 
@@ -210,30 +315,30 @@ public class quizpage extends AppCompatActivity {
 
     }
 
-        private void updatePoints(){
-            department[i] = 4;
-            i++;
+        public void updatePoints(){
+            department[j] = 4;
+            j++;
 
         }
-    private void updatePoints1(){
-        department[i] = 3;
-        i++;
+    public void updatePoints1(){
+        department[j] = 3;
+        j++;
 
     }
-    private void updatePoints2(){
-        department[i] = 2;
-        i++;
+    public void updatePoints2(){
+        department[j] = 2;
+        j++;
 
     }
-    private void updatePoints3(){
-        department[i] = 1;
-        i++;
+    public void updatePoints3(){
+        department[j] = 1;
+        j++;
 
     }
 
-      private void updateScore(int p){
-
-          score.setText(""+mScore);
+      public void updateScore(int p){
+    if (mScore<20)
+          score.setText(mScore+"/20");
       }
 
         public void updateQuestion() {
@@ -246,8 +351,6 @@ public class quizpage extends AppCompatActivity {
 
             mQuestionNumber++;
         }
-
-
 
 
     public void onBackPressed(){

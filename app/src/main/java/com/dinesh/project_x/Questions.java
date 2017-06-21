@@ -7,100 +7,44 @@ public class Questions {
 
 
 
-//    private String mTechnology[] = {
-//            "question form tech1",
-//            "question form tech2",
-//            "question form tech3",
-//            "question form tech4"
-//
-//    };
-//    private String mMedicine[] = {
-//            "question form med1",
-//            "question form med2",
-//            "question form med3",
-//            "question form med4"
-//
-//    };
-//    private String mBusiness[] = {
-//            "question form Bus1",
-//            "question form Bus2",
-//            "question form Bus3",
-//            "question form Bus4"
-//
-//    };
-//    private String mCivil_Services[] = {
-//            "question form civ1",
-//            "question form civ2",
-//            "question form civ3",
-//            "question form civ4"
-//
-//    };
-//    private String mCreativity[] = {
-//            "question form cre1",
-//            "question form cre2",
-//            "question form cre3",
-//            "question form cre4"
-//
-//    };
-
-//    private int mTechnologyLength = mTechnology.length;
-//    private int mMedicineLength = mMedicine.length;
-//    private int mBusinessLength = mBusiness.length;
-//    private int mCivil_ServicesLength = mCivil_Services.length;
-//    private int mCreativeLength = mCreativity.length;
-//
-//
-//    Random r= new Random();
-
 
     public String mQuestions[] = {
-//           mTechnology[0],
-//            mMedicine[0],
-//            mBusiness[0],
-//            mCivil_Services[0],
-//            mCreativity[0],
-//            mTechnology[1],
-//            mMedicine[1],
-//            mBusiness[1],
-//            mCivil_Services[1],
-//            mCreativity[1],
-//            mTechnology[2],
-//            mMedicine[2],
-//            mBusiness[2],
-//            mCivil_Services[2],
-//            mCreativity[2],
-//            mTechnology[3],
-//            mMedicine[3],
-//            mBusiness[3],
-//            mCivil_Services[3],
-//            mCreativity[3],
-//            mTechnology[4],
-//            mMedicine[4],
-//            mBusiness[4],
-//            mCivil_Services[4],
-//            mCreativity[4]
 
 
-            "question form tech1",
-            "question form tech2",
-            "question form tech3",
-            "question form tech4",
-            "question form med1",
-            "question form med2",
-            "question form med3",
-            "question form med4",
-            "question form Bus1",
-            "question form Bus2",
-            "question form Bus3",
-            "question form Bus4",
-            "question form civ1",
-            "question form civ2",
-            "question form civ3",
-            "question form civ4",
-            "question form cre1",
-            "question form cre2",
-            "question form cre3",
-            "question form cre4"
+
+            "question form technology1",
+            "question form Medical1",
+            "question form Business1",
+            "question form Civil1",
+            "question form Creative1",
+            "question form technology2",
+            "question form Medical2",
+            "question form Business2",
+            "question form Civil2",
+            "question form Creative2",
+            "question form technology3",
+            "question form Medical3",
+            "question form Business3",
+            "question form Civil3",
+            "question form Creative3",
+            "question form technology4",
+            "question form Medical4",
+            "question form Business4",
+            "question form Civil4",
+            "question form Creative4"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -111,31 +55,10 @@ public class Questions {
             {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"}
 
 
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"},
-//            {"Very Intrested","Intrested","Slightly Intrested","Not Intrested"}
 
 
     };
 
-//    private String mCorrectAnswers[]={"mercury","venus","earth","mars","jupiter","saturn"};
 
     public String getQuestion(int a){
         String question = mQuestions[a];
@@ -160,8 +83,5 @@ public class Questions {
         return choice3;
     }
 
-//    public String getCorrectAnswer(int a){
-//        String answer = mCorrectAnswers[a];
-//        return answer;
-//    }
+
 }
