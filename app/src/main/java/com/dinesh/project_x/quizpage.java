@@ -729,8 +729,7 @@ public class quizpage extends AppCompatActivity {
             department[j] = 4;
             j++;
 
-        }
-    public void updatePoints1(){
+        }public void updatePoints1(){
         department[j] = 3;
         j++;
 
