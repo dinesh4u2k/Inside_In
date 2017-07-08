@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import java.lang.Float;
+
 public class quizpage extends AppCompatActivity {
     private Questions mtechnology0 = new Questions();
     private Questions mtechnology5 = new Questions();
@@ -63,10 +65,10 @@ public class quizpage extends AppCompatActivity {
 
 
     boolean doubleTap = false;
-    public int[] department = new int[30];
+    public float[] department = new float[30];
     private int j=0;
     private int m=1;
-    public int tech,med,bus,civ,cre;
+    public float tech,med,bus,civ,cre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,16 +135,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -202,16 +204,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -283,16 +285,16 @@ public class quizpage extends AppCompatActivity {
                                     bus = (department[2] + department[7] + department[12] + department[17]);
                                     civ = (department[3] + department[8] + department[13] + department[18]);
                                     cre = (department[4] + department[9] + department[14] + department[19]);
-                                    String neww = Integer.toString(tech);
-                                    int newww = Integer.parseInt(neww);
-                                    String neww1 = Integer.toString(med);
-                                    int newww1 = Integer.parseInt(neww1);
-                                    String neww2 = Integer.toString(bus);
-                                    int newww2 = Integer.parseInt(neww2);
-                                    String neww3= Integer.toString(civ);
-                                    int newww3 = Integer.parseInt(neww3);
-                                    String neww4 = Integer.toString(cre);
-                                    int newww4 = Integer.parseInt(neww4);
+                                    String neww = Float.toString(tech);
+                                    float newww = Float.parseFloat(neww);
+                                    String neww1 = Float.toString(med);
+                                    float newww1 = Float.parseFloat(neww1);
+                                    String neww2 = Float.toString(bus);
+                                    float newww2 = Float.parseFloat(neww2);
+                                    String neww3= Float.toString(civ);
+                                    float newww3 = Float.parseFloat(neww3);
+                                    String neww4 = Float.toString(cre);
+                                    float newww4 = Float.parseFloat(neww4);
                                     Intent i = new Intent(quizpage.this, Result.class);
                                     i.putExtra("technology",newww);
                                     i.putExtra("medicine",newww1);
@@ -352,16 +354,16 @@ public class quizpage extends AppCompatActivity {
                                     bus = (department[2] + department[7] + department[12] + department[17]);
                                     civ = (department[3] + department[8] + department[13] + department[18]);
                                     cre = (department[4] + department[9] + department[14] + department[19]);
-                                    String neww = Integer.toString(tech);
-                                    int newww = Integer.parseInt(neww);
-                                    String neww1 = Integer.toString(med);
-                                    int newww1 = Integer.parseInt(neww1);
-                                    String neww2 = Integer.toString(bus);
-                                    int newww2 = Integer.parseInt(neww2);
-                                    String neww3= Integer.toString(civ);
-                                    int newww3 = Integer.parseInt(neww3);
-                                    String neww4 = Integer.toString(cre);
-                                    int newww4 = Integer.parseInt(neww4);
+                                    String neww = Float.toString(tech);
+                                    float newww = Float.parseFloat(neww);
+                                    String neww1 = Float.toString(med);
+                                    float newww1 = Float.parseFloat(neww1);
+                                    String neww2 = Float.toString(bus);
+                                    float newww2 = Float.parseFloat(neww2);
+                                    String neww3= Float.toString(civ);
+                                    float newww3 = Float.parseFloat(neww3);
+                                    String neww4 = Float.toString(cre);
+                                    float newww4 = Float.parseFloat(neww4);
                                     Intent i = new Intent(quizpage.this, Result.class);
                                     i.putExtra("technology",newww);
                                     i.putExtra("medicine",newww1);
@@ -435,16 +437,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -504,16 +506,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -585,16 +587,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -655,16 +657,16 @@ public class quizpage extends AppCompatActivity {
                         bus = (department[2] + department[7] + department[12] + department[17]);
                         civ = (department[3] + department[8] + department[13] + department[18]);
                         cre = (department[4] + department[9] + department[14] + department[19]);
-                        String neww = Integer.toString(tech);
-                        int newww = Integer.parseInt(neww);
-                        String neww1 = Integer.toString(med);
-                        int newww1 = Integer.parseInt(neww1);
-                        String neww2 = Integer.toString(bus);
-                        int newww2 = Integer.parseInt(neww2);
-                        String neww3= Integer.toString(civ);
-                        int newww3 = Integer.parseInt(neww3);
-                        String neww4 = Integer.toString(cre);
-                        int newww4 = Integer.parseInt(neww4);
+                        String neww = Float.toString(tech);
+                        float newww = Float.parseFloat(neww);
+                        String neww1 = Float.toString(med);
+                        float newww1 = Float.parseFloat(neww1);
+                        String neww2 = Float.toString(bus);
+                        float newww2 = Float.parseFloat(neww2);
+                        String neww3= Float.toString(civ);
+                        float newww3 = Float.parseFloat(neww3);
+                        String neww4 = Float.toString(cre);
+                        float newww4 = Float.parseFloat(neww4);
                         Intent i = new Intent(quizpage.this, Result.class);
                         i.putExtra("technology",newww);
                         i.putExtra("medicine",newww1);
@@ -726,21 +728,21 @@ public class quizpage extends AppCompatActivity {
     }
 
         public void updatePoints(){
-            department[j] = 4;
+            department[j] = 24.13f;
             j++;
 
         }public void updatePoints1(){
-        department[j] = 3;
+        department[j] = 18.67f;
         j++;
 
     }
     public void updatePoints2(){
-        department[j] = 2;
+        department[j] = 14.03f;
         j++;
 
     }
     public void updatePoints3(){
-        department[j] = 1;
+        department[j] = 8.89f;
         j++;
 
     }

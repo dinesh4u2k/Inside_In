@@ -27,11 +27,11 @@ public class Result extends AppCompatActivity   {
         Creativity = (TextView)findViewById(R.id.Creativity);
 
         Intent intent = getIntent();
-        int myvalue = intent.getIntExtra("technology",0);
-        int myvalue1 = intent.getIntExtra("medicine",0);
-        int myvalue2 = intent.getIntExtra("business",0);
-        int myvalue3 = intent.getIntExtra("civil_services",0);
-        int myvalue4 = intent.getIntExtra("creativity",0);
+        float myvalue = intent.getFloatExtra("technology",0.0f);
+        float myvalue1 = intent.getFloatExtra("medicine",0.0f);
+        float myvalue2 = intent.getFloatExtra("business",0.0f);
+        float myvalue3 = intent.getFloatExtra("civil_services",0.0f);
+        float myvalue4 = intent.getFloatExtra("creativity",0.0f);
         Technology.setText(""+myvalue);
         Medicine.setText(""+myvalue1);
         Business.setText(""+myvalue2);
