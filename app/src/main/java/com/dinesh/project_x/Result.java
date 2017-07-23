@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Result extends AppCompatActivity   {
-
+public class Result extends AppCompatActivity implements recycle.OnItemClickListener  {
     public TextView Technology,Medicine,Business,Civil_Services,Creativity;
 
     boolean doubleTap = false;
@@ -20,7 +22,16 @@ public class Result extends AppCompatActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        Technology = (TextView)findViewById(R.id.Technology);
+        RecyclerView recyclerView= (RecyclerView)findViewById(R.id.rcv);
+        int[] items={R.drawable.business, R.drawable.civil, R.drawable.cre2, R.drawable.medical, R.drawable.tech};
+
+        String[] imageName = {"business","civil","cre2","medical","tech"};
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView.setAdapter(new imageAdapter(items,imageName, this));
+
+        recyclerView.addOnItemTouchListener(new recycle(Result.this,recyclerView,this));
+
+      Technology = (TextView)findViewById(R.id.Technology);
         Medicine = (TextView)findViewById(R.id.Medicine);
         Business = (TextView)findViewById(R.id.Business);
         Civil_Services = (TextView)findViewById(R.id.Civil_Services);
@@ -55,5 +66,18 @@ public class Result extends AppCompatActivity   {
             }, 500);
         }
     }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        TextView textView = (TextView)view.findViewById(R.id.tv_name);
+        if(textView != null){
+            Toast.makeText(this,textView.getText().toString(),Toast.LENGTH_SHORT).show();
+        }
     }
+
+    @Override
+    public void onLongItemClick(View view, int position) {
+
+    }
+}
 
