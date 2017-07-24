@@ -7,26 +7,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context="com.dinesh.project_x.quizpage">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginBottom="40dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Questions attended"
-        android:textSize="20sp"
-        android:layout_alignParentLeft="true"
-        android:id="@+id/score_text"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/score"
-        android:layout_alignParentRight="true"
-        android:text="0"
-        android:textSize="20sp"/>
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Questions attended"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
@@ -73,15 +78,16 @@
 
     <TextView
         android:id="@+id/question"
-        android:gravity="center"
-        android:textSize="24sp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:text="@string/questions"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="58dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/questions"
+        android:textSize="24sp" />
 
 </RelativeLayout>
 

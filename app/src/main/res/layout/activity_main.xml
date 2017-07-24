@@ -23,27 +23,29 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.16"
-            android:text="Main Layout"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
+    </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/start"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginBottom="116dp"
-            android:text="START"
             android:onClick="gotoNextPage"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-    </LinearLayout>
-    
+            android:text="START" />
+    </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

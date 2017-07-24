@@ -2,18 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_tech"
+        android:icon="@mipmap/ic_technology_black_24dp"
         android:title="Technology" />
 
     <item android:id="@+id/nav_busi"
+        android:icon="@mipmap/ic_business_black_24dp"
         android:title="Business" />
 
     <item android:id="@+id/nav_civil"
+        android:icon="@mipmap/ic_civil_black_24dp"
         android:title="Civil" />
 
     <item android:id="@+id/nav_medi"
+        android:icon="@mipmap/ic_medical_black_24dp"
         android:title="Medical" />
 
     <item android:id="@+id/nav_cre"
+        android:icon="@mipmap/ic_creative_black_24dp"
         android:title="Creative" />
 
 </menu>
